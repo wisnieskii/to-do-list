@@ -1,3 +1,249 @@
-h1 {
-    color: rgb(207, 10, 89);
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #2f4f4f;
+    width: 100%;
+    height: 100%;
+    color: #d6cfd5;
+}
+
+header {
+    background-color: #aec7bb;
+    padding: 3rem;
+    margin: .5rem;
+    text-align: center;
+    border-radius: 5px;
+
+
+}
+
+header h1 {
+    padding-bottom: 3rem;
+    color: #2f4f4f;
+
+}
+
+input {
+    margin: 0;
+    border: none;
+    border-radius: 5px;
+    width: 75%;
+    padding: .6rem;
+    font-size: 1rem;
+    outline: none;
+    background-color: #2f4f4f;
+    color: #d6cfd5;
+}
+
+button {
+    padding: .6rem;
+    width: 20%;
+    background-color: #2f4f4f;
+    color: #d6cfd5;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+button:hover {
+    background-color: #7ebbb1;
+    color: #2f4f4f;
+}
+
+section#tasks {
+    margin: .5rem;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    position: relative;
+    background-color: #aec7bb;
+    margin-top: 5px;
+    color: #2f4f4f;
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 1.3rem;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #2f4f4f;
+    margin-left: 2px;
+
+}
+
+ul li a span {
+    color: #395457;
+    font-style: italic;
+    font-size: .8rem;
+    padding-left: 1rem;
+}
+
+ul li:nth-child(odd) {
+    background: #7ebbb1;
+    color: #395457;
+    transition: all .3s ease-in-out;
+}
+
+ul li:hover {
+    background-color: #9dbbbf;
+
+}
+
+a.btn-update,
+a.btn-delete {
+    padding: .5rem;
+    color: #395457;
+    transition: all .3s ease-in-out;
+}
+
+a.btn-update:hover {
+    background-color: #20d15e8a;
+    border-radius: 2px;
+    color: #fff;
+}
+
+a.btn-delete:hover {
+    background-color: rgba(238, 78, 78, 0.426);
+    color: rgb(228, 223, 223);
+    border-radius: 2px;
+}
+
+section#modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #4e746e8d;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: auto;
+}
+
+div#card {
+    width: 30rem;
+    border-radius: 12px;
+    position: relative;
+    background-color: #375f58;
+}
+
+div#head {
+    display: flex;
+    color: #d6cfd5;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+div#card h2 {
+    padding: 1.5rem;
+    margin: 0;
+}
+
+#fechar {
+    color: #d6cfd5;
+    right: 0;
+    top: 0.6em;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+div#card p {
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 3rem;
+}
+
+div#btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+}
+
+div#btns a {
+    text-decoration: none;
+    color: #d6cfd5;
+    padding: .9rem;
+    width: 7rem;
+    text-align: center;
+    background-color: #6c938c;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    transition: all .3s ease-in-out;
+    margin-right: 1rem;
+}
+
+div#btns a#not:hover {
+    background-color: rgba(238, 78, 78, 0.426);
+    color: #d6cfd5;
+    border-radius: 5px;
+
+}
+
+div#btns a#yes:hover {
+    background-color: #20d15e8a;
+    border-radius: 5px;
+    color: #d6cfd5;
+}
+
+.message {
+    margin: .5rem;
+    top: 0;
+    padding: 1rem;
+    background-color: #375f58;
+    border-radius: 10px;
+    width: auto;
+    position: sticky;
+    z-index: 9999;
+    text-align: center;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.message-danger {
+    background-color: rgba(238, 78, 78, 0.426);
+    color: #d6cfd5;
+}
+
+.message-success {
+    background-color: #20d15e8a;
+    color: #d6cfd5;
+}
+
+span#closeMessage {
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: .3s;
+    padding-left: 2rem;
+}
+
+ul li.check-true {
+    background-color: #395457;
+    color: #fff;
+    text-decoration: line-through;
 }
