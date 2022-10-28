@@ -2,13 +2,13 @@ const mongoose = require('mongoose');
 
 const connectToDb = () => {
     mongoose.connect(
-        "mongodb+srv://amandita:admin@todo-list.rmsjtdv.mongodb.net/?retryWrites=true&w=majority",
+        process.env.DB_URI,
         {
             useNewUrlParser: true,
             useUnifiedTopology: true,
         }
     ).then(() => {
-        console.log('Ta rodando piranha')
+        console.log('Rodando...')
     }).catch((err) =>
         console.log(err)
     )
